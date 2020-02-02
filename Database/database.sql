@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- HÃ´te : 127.0.0.1:3306
--- GÃ©nÃ©rÃ© le :  Dim 02 fÃ©v. 2020 Ã  16:58
+-- GÃ©nÃ©rÃ© le :  Dim 02 fÃ©v. 2020 Ã  16:59
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -33,6 +33,13 @@ CREATE TABLE IF NOT EXISTS `test` (
   `id` int(11) NOT NULL,
   `nombre` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- DÃ©chargement des donnÃ©es de la table `test`
+--
+
+INSERT INTO `test` (`id`, `nombre`) VALUES
+(1, 23);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
