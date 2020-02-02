@@ -1,4 +1,3 @@
 # Wasted
 
-Hello world !
-Product by Eddie Vallier
+Product by Eddie Vallier & Julien Degrave
