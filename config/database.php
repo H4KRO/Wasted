@@ -1,3 +1,8 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=wasted;charset=utf8', 'root', '');
+$host = "localhost";
+$dbname = "wasted";
+$username = "root";
+$password = "";
+
+$pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8', $username, $password);
  ?>
