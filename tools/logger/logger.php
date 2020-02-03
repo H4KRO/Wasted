@@ -14,7 +14,7 @@ class logger {
   }
 
   static function log($text){
-    Logger::init();
+    Logger::init(); 
     $timeDay = date("Y-m-d");
     $timeHour = date("H:i:s");
     $log_raw = $timeHour . " : " . $text;
