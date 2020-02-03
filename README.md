@@ -8,3 +8,6 @@ To setup new clear database follow this instruction :
     Remove database "wasted" if exist
     Create new database named "wasted" encoded with "utf8_general_ci"
     All done :)
+
+
+Database created with PHPMyAdmin, but no one table on this database.
