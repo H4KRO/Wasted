@@ -1,3 +1,3 @@
 <?php
-$GLOBALS['logger'] = true;
+$GLOBALS['logger'] = false;
  ?>
