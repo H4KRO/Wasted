@@ -1,8 +1,9 @@
 <?php
 
 // Env Path
-$STYLEPATH = "template/style/";
+$STYLEPATH = 'template/style/';
 $TOOLSPATH = 'tools/';
+$TEMPLATEPATH = 'template/';
 
 // Config
 include('config/database.php');

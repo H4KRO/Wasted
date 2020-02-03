@@ -1,6 +1,7 @@
-
-<section> 
-    <h2>New game</h2>
-    <h2>Join</h2>
-    <h2>Setting</h2>
-</section> 
+<?php
+$page = 'main';
+if ( isset( $_GET['page'] ) && $_GET['page'] != '' && file_exists( $TEMPLATEPATH . "pages/" . $_GET['page'] . '.php' ) ){
+	$page = $_GET['page'];
+}
+require_once($TEMPLATEPATH . "pages/" . $page . ".php");
+ ?>
