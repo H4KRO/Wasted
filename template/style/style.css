@@ -19,6 +19,13 @@ a {
   overflow-y: scroll;
 }
 
+body 
+{
+  background : linear-gradient(black, red);
+  background-attachment: fixed; 
+
+}
+
 .logger p {
   font-family: "Gill Sans", sans-serif;
 }
@@ -27,21 +34,43 @@ a {
 {
   background : linear-gradient(rgba(148, 146, 146, 0.815), rgb(250, 250, 250));
   color: rgb(17, 20, 195);
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   border-style: ridge;
   text-align: center;
-  margin : 2% 40%;
+  margin : 2% 30%;
   padding : 1% 0;
   border-color: brown;
   border-width: 1rem;
+  margin-bottom: 10%;
+}
+
+.choice
+{
+  background : linear-gradient(rgba(148, 146, 146, 0.815), rgb(250, 250, 250));
+  color: rgb(17, 20, 195);
+  font-size: 2.6rem;
+  border-style: ridge;
+  border-color: brown;
+  text-align: center;
+  border-width: 1rem;
+  margin : 2% 20%;
+  margin-bottom: 5%;
+  padding : 1% 0;
 }
 
 @media screen and (max-width: 1000px)
 {
   #title
   {
-    font-size: 2em;
-    margin: 3% 25%;
+    font-size: 3em;
+    margin: 3% 12%;
+    margin-bottom: 30%;
+    margin-top: 10%;
     border-width: 0.7rem;
+  }
+  .choice
+  {
+    font-size: 2.4em;
+    border-width: 0.5rem;
   }
 }
