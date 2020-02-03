@@ -5,6 +5,3 @@
   <link rel="stylesheet" type="text/css" href="<?php echo $STYLEPATH; ?>style.css">
 </head>
 <body>
-
-</body>
-</html>

@@ -1,1 +1,19 @@
 /* CSS Style */
+.logger {
+  background-color: #1e88e5;
+  border: 2px solid #1976d2;
+  border-radius: 5px;
+  z-index: 1;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  right: 0px;
+  bottom: 0px;
+  color: white;
+  padding: 1%;
+  overflow-y: scroll;
+}
+
+.logger p {
+  font-family: "Gill Sans", sans-serif;
+}
