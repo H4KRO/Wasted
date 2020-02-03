@@ -6,14 +6,14 @@ $TOOLSPATH = 'tools/';
 $TEMPLATEPATH = 'template/';
 
 // Config
-include('config/database.php');
-include('config/config.php');
+require_once('config/database.php');
+require_once('config/config.php');
 
 // Tools
-include('tools/logger/logger.php');
+require_once('tools/logger/logger.php');
 
 // Templating
-include('template/header.php');
-include('template/content.php');
-include('template/footer.php');
+require_once('template/header.php');
+require_once('template/content.php');
+require_once('template/footer.php');
  ?>
