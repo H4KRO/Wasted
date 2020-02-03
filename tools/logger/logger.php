@@ -20,7 +20,7 @@ class logger {
     $log_raw = $timeHour . " : " . $text;
     array_push(Logger::$logs, $log_raw);
     $GLOBALS['pdo']->query("
-      INSERT INTO `logger` (`id`, `time`, `log`)
+      INSERT INTO `logger`(`id`, `time`, `log`)
       VALUES (NULL, '" . $timeDay . " " . $timeHour .  "', '" . $text . "');"
     );
   }
