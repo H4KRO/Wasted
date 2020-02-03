@@ -58,6 +58,12 @@ body
   padding : 1% 0;
 }
 
+#salon
+{
+  font-style: italic;
+  margin: 10%;
+  margin-top: 1%;
+}
 @media screen and (max-width: 1000px)
 {
   #title
