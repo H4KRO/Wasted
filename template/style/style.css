@@ -21,8 +21,8 @@
 #title
 {
   background : linear-gradient(rgba(148, 146, 146, 0.815), rgb(250, 250, 250));  
-  color: rgb(35, 95, 40);
-  font-size: 3rem;
+  color: rgb(17, 20, 195);
+  font-size: 2.8rem;
   border-style: ridge;
   text-align: center;
   margin : 2% 40%;
@@ -31,7 +31,7 @@
   border-width: 1rem;
 }
 
-@media screen and (max-width: 800px) 
+@media screen and (max-width: 1000px) 
 {
   #title
   {
