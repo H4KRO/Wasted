@@ -3,7 +3,6 @@ a {
   color: currentColor;
   text-decoration: none;
 }
-
 .logger {
   background-color: #1e88e5;
   border: 2px solid #1976d2;
@@ -19,64 +18,57 @@ a {
   overflow-y: scroll;
 }
 
-body 
-{
-  background : linear-gradient(black, red);
-  background-attachment: fixed; 
+* {padding: 0; margin: 0;}
 
+html, body 
+{ 
+   height: 100%; 
 }
+
 
 .logger p {
   font-family: "Gill Sans", sans-serif;
 }
 
-#title
+.section
 {
-  background : linear-gradient(rgba(148, 146, 146, 0.815), rgb(250, 250, 250));
-  color: rgb(17, 20, 195);
-  font-size: 3.2rem;
-  border-style: ridge;
+  overflow: hidden;
+  height: auto;
+  min-height: 50%;
   text-align: center;
-  margin : 2% 30%;
-  padding : 1% 0;
-  border-color: brown;
-  border-width: 1rem;
-  margin-bottom: 10%;
+  display: block;
 }
 
-.choice
+.p_section
 {
-  background : linear-gradient(rgba(148, 146, 146, 0.815), rgb(250, 250, 250));
-  color: rgb(17, 20, 195);
-  font-size: 2.6rem;
-  border-style: ridge;
-  border-color: brown;
-  text-align: center;
-  border-width: 1rem;
-  margin : 2% 20%;
-  margin-bottom: 5%;
-  padding : 1% 0;
+  font-size: 4em;
+  color: antiquewhite;
+  margin-top: 40%;
 }
 
-#salon
+#wasted
 {
-  font-style: italic;
-  margin: 10%;
-  margin-top: 1%;
+  margin-left: 35%;
+  margin-top: 80%;
+  padding: 10%;
+  display: block;
+  text-align: center;
+  background-color: #E7AB5B;
+  position: absolute;
+  z-index: 20;
 }
+
+#C_P
+{
+  background-color: #655BE7;
+}
+#J_P
+{
+  background-color: #E7655B;
+}
+
+
 @media screen and (max-width: 1000px)
 {
-  #title
-  {
-    font-size: 3em;
-    margin: 3% 12%;
-    margin-bottom: 30%;
-    margin-top: 10%;
-    border-width: 0.7rem;
-  }
-  .choice
-  {
-    font-size: 2.4em;
-    border-width: 0.5rem;
-  }
+
 }

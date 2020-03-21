@@ -1,6 +1,12 @@
-<section>
-    <h2 class="choice"><a href="?page=master">New game</a></h2>
-    <h2 class="choice"><a href="?page=join">Join</a></h2>
-    <h2 class="choice"><a href="?page=setting">Setting</a></h2>
+
+<section id="wasted">
+    <p><strong>Wasted</strong></p>
 </section>
 
+<a id="C_P"class ="section" href="">
+    <p class="p_section">Créer une partie</p>
+</a>
+
+<a id="J_P" class ="section" href="">
+    <p class="p_section">Rejoindre une partie</p>
+</a>
