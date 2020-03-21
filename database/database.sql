@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- HÃ´te : 127.0.0.1:3306
--- GÃ©nÃ©rÃ© le :  sam. 21 mars 2020 Ã  21:01
+-- GÃ©nÃ©rÃ© le :  sam. 21 mars 2020 Ã  21:04
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 -- Structure de la table `logger`
 --
 
-DROP TABLE IF EXISTS `logger`;
 CREATE TABLE IF NOT EXISTS `logger` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `time` datetime NOT NULL,
@@ -42,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `logger` (
 -- Structure de la table `party`
 --
 
-DROP TABLE IF EXISTS `party`;
 CREATE TABLE IF NOT EXISTS `party` (
   `id` varchar(30) NOT NULL,
   `started` tinyint(1) NOT NULL,
@@ -56,7 +54,6 @@ CREATE TABLE IF NOT EXISTS `party` (
 -- Structure de la table `player`
 --
 
-DROP TABLE IF EXISTS `player`;
 CREATE TABLE IF NOT EXISTS `player` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` varchar(30) NOT NULL,
