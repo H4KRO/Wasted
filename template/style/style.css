@@ -39,7 +39,6 @@ html, body
   overflow: hidden;
   height: auto;
   min-height: 50%;
-  text-align: center;
   display: block;
 }
 
@@ -48,10 +47,22 @@ html, body
   font-family: 'Luckiest Guy', cursive;
   font-size: 400%;
   color: antiquewhite;
-  margin-top: 150px;
   height: auto;
   transition: all 0.7s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
 }
+
+#C_P .p_section {
+  top: 25%;
+}
+
+#J_P .p_section {
+  top: 75%;
+}
+
 .p_section:active
 {
   transform: scale(0.9);
@@ -92,17 +103,4 @@ html, body
 #J_P:active
 {
   background-color: rgb(212, 65, 54);
-}
-
-@media screen and (min-width: 701px)
-{
-  #wasted
-  {
-    background-color: rgb(148, 148, 148);
-
-  }
-  .p_section
-  {
-    margin-top: 170px;
-  }
 }
