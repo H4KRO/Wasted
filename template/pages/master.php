@@ -1,14 +1,12 @@
-<section class ="choice">
-    <form methode="post" class = "choice_peudo">
-        Choisir un pseudo : <input type="text" maxlength="10" name="pseudo">
+<section id="master_top"class ="section">
+    <form action="" methode="post" id="pseudo">
+        <p><strong>Pseudo</strong></p>
+        <input id="master_input"type="text" maxlength="15" name="pseudo">
+        <!-- <input id="ok" type="submit" value="Ok"> -->
     </form>
 </section>
 
-<section class="choice">
+<section id="master_bot" class="section">
     <a href="#" >$LIEN_INC</a>
     <a href="#">Copier ce lien</a>
-</section>
-
-<section class="choice">
-    <p id="salon">Salon</p>
 </section>

@@ -52,17 +52,18 @@ html, body
   text-align: center;
 }
 
-#C_P .p_section {
+#main_top .p_section {
   top: 25%;
 }
 
-#J_P .p_section {
+#main_bot .p_section {
   top: 75%;
 }
 
-.p_section:active
+/* -------------------------MAIN ------------------------------*/
+.p_section:active 
 {
-  transform: scale(0.9);
+  transform: scale(0.5) translate(-100%, -100%);
 }
 
 #wasted
@@ -83,21 +84,56 @@ html, body
   transform: translate(-50%, -50%);
 }
 
-#C_P
+#main_top
 {
   background-color: #655BE7;
   transition: all 0.5s;
 }
-#C_P:active
+#main_top:active
 {
   background-color: rgb(69, 60, 199);
 }
-#J_P
+#main_bot
 {
   background-color: #E7655B;
   transition: all 0.5s;
 }
-#J_P:active
+#main_bot:active
 {
   background-color: rgb(212, 65, 54);
 }
+
+/* ------------------------- MASTER ------------------------------*/
+
+#master_top
+{
+  background-color: #655BE7;
+}
+
+#master_bot
+{
+  background-color: #E7655B;
+}
+#pseudo
+{
+  top: 10%;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 400%;
+  color: antiquewhite;
+  height: auto;
+  transition: all 0.7s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+}
+
+#master_input
+{
+  border-radius: 15px;
+  padding-left: 4px;
+  font-family: 'Luckiest Guy', cursive;
+  width: auto;
+  height: 30px;
+}
+
