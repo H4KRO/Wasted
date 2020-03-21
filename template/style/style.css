@@ -110,9 +110,19 @@ html, body
   background-color: #655BE7;
 }
 
+#master_bot .p_section
+{
+  top: 75%;
+}
 #master_bot
 {
   background-color: #E7655B;
+  transition: all 0.5s;
+}
+
+#master_bot:active
+{
+  background-color: rgb(218, 74, 64);
 }
 #pseudo
 {
@@ -127,7 +137,17 @@ html, body
   left: 50%;
   text-align: center;
 }
-
+#master_start
+{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 400%;
+  color: antiquewhite;
+  height: auto;
+  transition: all 0.7s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
 #master_input
 {
   border-radius: 15px;
