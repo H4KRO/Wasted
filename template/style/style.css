@@ -157,3 +157,14 @@ html, body
   height: 30px;
 }
 
+
+/* ------------------------- CREATE ------------------------------*/
+
+.ok
+{
+  color: antiquewhite;
+  font-family: 'Luckiest Guy', cursive;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #E7AB5B;
+}

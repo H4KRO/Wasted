@@ -1,6 +1,11 @@
-<div id="main_top" class ="section">
-      <p class="p_section">Ajouter des gages & <a href="?page=admingame">commencer</a></p>
-</div>
+<section id="master_top" class ="section">
+    <form action="?page="adminwarmup"  methode="post" id="pseudo">
+        <p>Ajoute des gages</p>
+        <input id="master_input" type="text" maxlength="15" name="gages">
+        <input class="ok" type="submit" value="Ok">
+    </form>
+</section>
+
 <div id="main_bot" class ="section">
       <p class="p_section">Options de partage</p>
 </div>
