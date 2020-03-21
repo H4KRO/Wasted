@@ -8,5 +8,6 @@
 </section>
 
 <div id="main_bot" class ="section">
-      <p class="p_section">Options de partage</p>
+      <p id="game_link">Options de partage</p>
+      <a href= "?page=admingame"><p id="join" class="p_section">Lancer</p>
 </div>
