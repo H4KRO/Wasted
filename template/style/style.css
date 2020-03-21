@@ -20,9 +20,9 @@ a {
 
 * {padding: 0; margin: 0;}
 
-html, body 
-{ 
-   height: 100%; 
+html, body
+{
+   height: 100%;
    border-style: ridge;
    border-color: #E7AB5B;
    border-width: 1px;
@@ -62,8 +62,6 @@ html, body
   color: rgb(255, 255, 255);
   font-family: 'Bungee Shade', cursive;
   border-style: groove;
-  margin-left: 20%;
-  margin-top:400px;
   padding: 10px;
   padding-left: 10%;
   padding-right: 10%;
@@ -72,6 +70,9 @@ html, body
   background-color: #E7AB5B;
   position: fixed;
   z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #C_P
@@ -98,12 +99,10 @@ html, body
   #wasted
   {
     background-color: rgb(148, 148, 148);
-    margin-left: 40%;
-    margin-right: 40%;
+
   }
   .p_section
   {
     margin-top: 170px;
   }
 }
-
