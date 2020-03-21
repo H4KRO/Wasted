@@ -23,9 +23,6 @@ a {
 html, body
 {
    height: 100%;
-   border-style: ridge;
-   border-color: #E7AB5B;
-   border-width: 1px;
 }
 
 
@@ -47,6 +44,8 @@ html, body
   font-family: 'Luckiest Guy', cursive;
   font-size: 400%;
   color: antiquewhite;
+  top:50%;
+  bottom: 25%;;
   height: auto;
   transition: all 0.7s;
   position: absolute;
