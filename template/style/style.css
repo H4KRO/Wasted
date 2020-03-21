@@ -23,6 +23,9 @@ a {
 html, body 
 { 
    height: 100%; 
+   border-style: ridge;
+   border-color: #E7AB5B;
+   border-width: 1px;
 }
 
 
@@ -42,27 +45,30 @@ html, body
 
 .p_section
 {
+  font-family: 'Luckiest Guy', cursive;
   font-size: 400%;
   color: antiquewhite;
-  margin-top: 200px;
+  margin-top: 150px;
   height: auto;
   transition: all 0.7s;
 }
-.p_section:hover
+.p_section:active
 {
   transform: scale(0.9);
 }
 
 #wasted
 {
+  color: rgb(255, 255, 255);
+  font-family: 'Bungee Shade', cursive;
   border-style: groove;
-  margin-left: 25%;
+  margin-left: 22%;
   margin-top:400px;
-  padding: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
   display: block;
-  text-align: center;
+  font-size: 2.5em;
   background-color: #E7AB5B;
   position: fixed;
   z-index: 20;
@@ -72,15 +78,19 @@ html, body
 {
   background-color: #655BE7;
   transition: all 0.5s;
-  padding:0;
 }
-#C_P .p_section:hover
+#C_P:active
 {
-  background-color: rgb(38, 33, 112);
+  background-color: rgb(69, 60, 199);
 }
 #J_P
 {
   background-color: #E7655B;
+  transition: all 0.5s;
+}
+#J_P:active
+{
+  background-color: rgb(212, 65, 54);
 }
 
 @media screen and (min-width: 701px)
@@ -88,6 +98,12 @@ html, body
   #wasted
   {
     background-color: rgb(148, 148, 148);
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+  .p_section
+  {
+    margin-top: 170px;
   }
 }
 
