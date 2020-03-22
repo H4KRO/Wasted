@@ -1,9 +1,9 @@
 <?php
 
 // Env Path
-$STYLEPATH = 'template/style/';
+$STYLEPATH = 'view/style/';
 $TOOLSPATH = 'tools/';
-$TEMPLATEPATH = 'template/';
+$TEMPLATEPATH = 'view/';
 
 // Config
 require_once('config/database.php');
@@ -13,7 +13,7 @@ require_once('config/config.php');
 require_once('tools/logger/logger.php');
 
 // Templating
-require_once('template/header.php');
-require_once('template/content.php');
-require_once('template/footer.php');
+require_once($TEMPLATEPATH . 'header.php');
+require_once($TEMPLATEPATH . 'content.php');
+require_once($TEMPLATEPATH . 'footer.php');
  ?>
