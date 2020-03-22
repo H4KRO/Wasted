@@ -61,7 +61,7 @@ html, body
 }
 
 /* -------------------------MAIN ------------------------------*/
-.p_section:active 
+.p_section:active
 {
   transform: scale(0.5) translate(-100%, -100%);
 }
@@ -167,6 +167,11 @@ html, body
   border-radius: 5px;
   padding: 5px;
   background-color: #E7AB5B;
+  font-size: 1em;
+}
+
+.ok:hover {
+  cursor: pointer;
 }
 
 /* ------------------------- JOIN ------------------------------*/
@@ -185,7 +190,7 @@ html, body
   text-align: center;
 }
 
-#join 
+#join
 {
   transform: translate(-50%, 100%);
 }
