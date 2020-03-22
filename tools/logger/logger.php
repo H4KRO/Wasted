@@ -3,18 +3,7 @@ class logger {
 
   static $logs = [];
 
-  static function init(){
-    $GLOBALS['pdo']->query("
-      CREATE TABLE `wasted`.`logger` IF NOT EXISTS (
-        `id` INT NOT NULL AUTO_INCREMENT ,
-        `time` DATETIME NOT NULL ,
-        `log` VARCHAR(250) NOT NULL ,
-        PRIMARY KEY (`id`)) ENGINE = MyISAM;"
-    );
-  }
-
   static function log($text){
-    Logger::init(); 
     $timeDay = date("Y-m-d");
     $timeHour = date("H:i:s");
     $log_raw = $timeHour . " : " . $text;
@@ -23,6 +12,19 @@ class logger {
       INSERT INTO `logger`(`id`, `time`, `log`)
       VALUES (NULL, '" . $timeDay . " " . $timeHour .  "', '" . $text . "');"
     );
+  }
+
+  static function logSimple($text){
+    array_push(Logger::$logs, $text);
+  }
+
+  static function logArray($array){
+    ob_start();
+    print_r($array);
+    $log_raw = "<pre>" . ob_get_contents() . "</pre>";
+    ob_end_clean();
+    array_push(Logger::$logs, $log_raw);
+
   }
 
   static function displayLogs(){

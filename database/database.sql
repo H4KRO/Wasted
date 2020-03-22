@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- HÃ´te : 127.0.0.1:3306
--- GÃ©nÃ©rÃ© le :  sam. 21 mars 2020 Ã  21:04
+-- GÃ©nÃ©rÃ© le :  Dim 22 mars 2020 Ã  21:29
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -57,9 +57,9 @@ CREATE TABLE IF NOT EXISTS `party` (
 CREATE TABLE IF NOT EXISTS `player` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` varchar(30) NOT NULL,
-  `username` int(10) NOT NULL,
+  `username` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
