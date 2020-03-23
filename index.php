@@ -17,6 +17,7 @@ require_once('tools/logger/logger.php');
 // Models
 require_once($MODELPATH . 'party.php');
 require_once($MODELPATH . 'player.php');
+require_once($MODELPATH . 'gage.php');
 
 // Controllers
 require_once($CONTROLLERPATH . 'PartyController.php');

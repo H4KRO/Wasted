@@ -7,7 +7,7 @@ class Party {
     $this->started = 0;
     $this->admin = uniqid();
     $pdo = $GLOBALS['pdo'];
-    $sql = "INSERT INTO party VALUES(:id, :started, :admin)";
+    $sql = "INSERT INTO party (id, started, admin) VALUES(:id, :started, :admin)";
     $req = $pdo->prepare($sql);
     $req->execute(array(":id" => $this->id, ":started" => $this->started, "admin" => $this->admin));
   }
