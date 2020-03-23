@@ -5,7 +5,7 @@
     </a>
 </div>
 <div id="main_bot" class ="section">
-    <a href="?page=join">
+    <a href="?controller=PartyController&method=join">
         <p class="p_section">Rejoindre une partie</p>
     </a>
 </div>

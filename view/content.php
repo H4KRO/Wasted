@@ -16,4 +16,4 @@ if(isset($_GET['controller']) && isset($_GET['method']) && method_exists($_GET['
 	require_once($TEMPLATEPATH . "pages/main.php");
 }
 
- ?>
+?>

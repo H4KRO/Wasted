@@ -1,13 +1,15 @@
 <?php
 
 class Player {
-  public function __construct($game_id, $username){
-    $this->game_id = $game_id;
-    $this->username = $username;
+
+  public static function create($game_id, $username){
+    $player = new Player();
+    $player->game_id = $game_id;
+    $player->username = $username;
     $pdo = $GLOBALS['pdo'];
     $sql = "INSERT INTO player (game_id, username) VALUES(:game_id, :username)";
     $req = $pdo->prepare($sql);
-    $req->execute(array(":game_id" => $this->game_id, ":username" => $this->username));
+    $req->execute(array(":game_id" => $player->game_id, ":username" => $player->username));
   }
 
   public static function getAll() {
