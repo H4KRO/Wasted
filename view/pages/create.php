@@ -20,7 +20,3 @@
     document.getElementById("hidden_username").value = document.getElementById("master_input").value;
   }
 </script>
-
-<?php
-  Logger::logSimple("J'ai bien accès à l'ID = " . $party->id);
- ?>
