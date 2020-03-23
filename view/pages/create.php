@@ -1,6 +1,5 @@
-<section id="main_top"class ="section">
-  <div class="p_section">
-        <p><strong>Pseudo</strong></p>
+<section id="master_top"class ="section">
+        <p id = "pseudo"><strong>Pseudo</strong></p>
         <input id="master_input"type="text" maxlength="15" name="pseudo_admin">
   </div>
 </section>

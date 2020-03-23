@@ -107,6 +107,7 @@ html, body
 
 #master_top
 {
+  top: 25%;
   background-color: #655BE7;
 }
 
@@ -126,7 +127,7 @@ html, body
 }
 #pseudo
 {
-  top: 25%;
+  top: 20%;
   font-family: 'Luckiest Guy', cursive;
   font-size: 400%;
   color: antiquewhite;
@@ -154,7 +155,12 @@ html, body
   padding-left: 6px;
   font-family: 'Luckiest Guy', cursive;
   width: 200px;
-  height: 30px;
+  height: 30px;  
+  position: absolute;
+  top : 30%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
 }
 
 
@@ -174,11 +180,31 @@ html, body
   cursor: pointer;
 }
 
+#input_gage
+{
+  border-radius: 15px;
+  padding-left: 6px;
+  font-family: 'Luckiest Guy', cursive;
+  width: 200px;
+  height: 30px; 
+}
+
+#link
+{
+  text-align: center;
+  font-size: 200%;
+  background-color: #E7AB5B;
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  transform: translate(0, 400%);
+}
+
 /* ------------------------- JOIN ------------------------------*/
 
 #game_link
 {
-  top: 65%;
+  top: 60%;
   font-family: 'Luckiest Guy', cursive;
   font-size: 300%;
   color: antiquewhite;
