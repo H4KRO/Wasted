@@ -40,6 +40,13 @@ class Party {
     Logger::logSimple($this->id);
     return Challenge::sort($this->id);
   }
+
+  public function start() {
+    $pdo = $GLOBALS['pdo'];
+    $sql = "UPDATE party SET started = 1 WHERE admin = :admin;";
+    $req = $pdo->prepare($sql);
+    $req->execute(array(":admin" => $this->admin));
+  }
 }
 
  ?>

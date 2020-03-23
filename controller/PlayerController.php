@@ -6,7 +6,6 @@ class PlayerController {
       $party = Party::getParty($_GET['game_id']);
       Logger::logArray($party);
       $player = new Player($_GET['game_id'], $_GET['username']);
-      Logger::logSimple("Nouveu joueur !");
       Logger::logArray($player);
       require_once('view/pages/adminwarmup.php');
     }

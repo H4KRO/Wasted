@@ -15,6 +15,7 @@ class PartyController {
 
   static function sort(){
     $party = Party::getPartyFromAdmin($_GET['admin']);
+    $party->start();
     $challenge = $party->sortChallenge();
     require_once('view/pages/admingame.php');
   }
