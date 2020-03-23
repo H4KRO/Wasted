@@ -155,7 +155,7 @@ html, body
   padding-left: 6px;
   font-family: 'Luckiest Guy', cursive;
   width: 200px;
-  height: 30px;  
+  height: 30px;
   position: absolute;
   top : 30%;
   transform: translate(-50%, -50%);
@@ -186,7 +186,7 @@ html, body
   padding-left: 6px;
   font-family: 'Luckiest Guy', cursive;
   width: 200px;
-  height: 30px; 
+  height: 30px;
 }
 
 #link
@@ -219,4 +219,28 @@ html, body
 #join
 {
   transform: translate(-50%, 100%);
+}
+
+@keyframes error {
+  from {top: -100%;}
+  to {top: 0px;}
+}
+
+#error {
+  position: absolute;
+  left: 50%;
+  width: 30%;
+  text-align: center;
+  background-color: #37474f;
+  color: #fafafa;
+  transform: translate(-50%, 0);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px;
+  border-style: none solid solid solid;
+  border-color: #62727b;
+  border-width: 2px;
+  animation-name: error;
+  animation-duration: 1s;
+  font-family: 'Baloo 2', cursive;
 }

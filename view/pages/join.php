@@ -9,7 +9,7 @@
         <input type="hidden" name="method" value="join_game">
         <input type="hidden" name="controller" value="PlayerController">
         <input type="submit" value="Rejoindre">
-        </form>
+      </form>
 </div>
 <script>
   document.getElementById("master_input").onchange = function() {
