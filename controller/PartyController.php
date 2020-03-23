@@ -8,7 +8,8 @@ class PartyController {
   }
 
   static function join() {
-    require_once('view/pages/join.php');
+    $page = "join";
+    require_once('view/main.php');
   }
 
   static function add_challenge(){
