@@ -6,6 +6,10 @@ class PartyController {
     require_once('view/pages/create.php');
   }
 
+  static function join() {
+    require_once('view/pages/join.php');
+  }
+
   static function add_challenge(){
     $party = Party::getParty($_GET['game_id']);
     Logger::logArray($party);
