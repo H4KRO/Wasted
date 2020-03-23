@@ -7,7 +7,8 @@ class PlayerController {
       Logger::logArray($party);
       $player = new Player($_GET['game_id'], $_GET['username']);
       Logger::logArray($player);
-      require_once('view/pages/adminwarmup.php');
+      $page = "adminwarmup";
+      require_once('view/main.php');
     }
   }
 }
