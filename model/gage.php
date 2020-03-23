@@ -5,7 +5,7 @@ class gage {
   public function __construct($g_gage, $g_game_id) {
     $this->id = uniqid();
     $this->nom = $g_gage;
-    $this->game_id = $_GET['game_id'];
+    $this->game_id = $g_game_id;
     $pdo = $GLOBALS['pdo'];
     $sql = "INSERT INTO gage (id, nom, id_party) VALUES(:id, :nom, :id_party)";
     $req = $pdo->prepare($sql);
