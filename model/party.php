@@ -37,7 +37,6 @@ class Party {
   }
 
   public function sortChallenge() {
-    Logger::logSimple($this->id);
     return Challenge::sort($this->id);
   }
 
