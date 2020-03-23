@@ -25,12 +25,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gage`
+-- Structure de la table `challenge`
 --
 
-CREATE TABLE IF NOT EXISTS `gage` (
+CREATE TABLE IF NOT EXISTS `challenge` (
   `id` varchar(30) NOT NULL,
-  `nom` text NOT NULL,
+  `name` text NOT NULL,
   `id_party` varchar(30) NOT NULL,
   `id_player` int(11) NOT NULL,
   PRIMARY KEY (`id`)
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `party` (
 CREATE TABLE IF NOT EXISTS `player` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` varchar(30) NOT NULL,
-  `username` int(10) NOT NULL,
+  `username` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 COMMIT;

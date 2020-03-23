@@ -5,10 +5,10 @@ class PartyController {
     require_once('view/pages/create.php');
   }
 
-  static function add_gage(){
-    $gage = new gage($_GET['gage'], $_GET['game_id']);
+  static function add_challenge(){
+    $challenge = new challenge($_GET['challenge'], $_GET['game_id']);
     Logger::logSimple("Nouveau gage !");
-    Logger::logArray($gage);
+    Logger::logArray($challenge);
     require_once('view/pages/adminwarmup.php');
   }
 }
