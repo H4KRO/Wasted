@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 -- Structure de la table `challenge`
 --
 
-DROP TABLE IF EXISTS `challenge`;
 CREATE TABLE IF NOT EXISTS `challenge` (
   `id` varchar(30) NOT NULL,
   `name` text NOT NULL,
@@ -43,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `challenge` (
 -- Structure de la table `logger`
 --
 
-DROP TABLE IF EXISTS `logger`;
 CREATE TABLE IF NOT EXISTS `logger` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `time` datetime NOT NULL,
@@ -57,7 +55,6 @@ CREATE TABLE IF NOT EXISTS `logger` (
 -- Structure de la table `party`
 --
 
-DROP TABLE IF EXISTS `party`;
 CREATE TABLE IF NOT EXISTS `party` (
   `id` varchar(30) NOT NULL,
   `started` tinyint(1) NOT NULL,
@@ -71,7 +68,6 @@ CREATE TABLE IF NOT EXISTS `party` (
 -- Structure de la table `player`
 --
 
-DROP TABLE IF EXISTS `player`;
 CREATE TABLE IF NOT EXISTS `player` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` varchar(30) NOT NULL,
