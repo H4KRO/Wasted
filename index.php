@@ -22,8 +22,7 @@ require_once($MODELPATH . 'challenge.php');
 // Controllers
 require_once($CONTROLLERPATH . 'PartyController.php');
 require_once($CONTROLLERPATH . 'PlayerController.php');
-
-Logger::logArray(Party::getAll());
+require_once($CONTROLLERPATH . 'ChallengeController.php');
 
 
 // Views

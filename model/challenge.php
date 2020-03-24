@@ -24,8 +24,24 @@ class Challenge {
     $sql = "SELECT * FROM challenge WHERE id_party = :id ORDER BY RAND() LIMIT 1;";
     $req = $pdo->prepare($sql);
     $req->execute(array(":id" => $id));
-    return $req->fetchAll(PDO::FETCH_CLASS, 'Challenge')[0];
+    $challenge = $req->fetchAll(PDO::FETCH_CLASS, 'Challenge')[0];
+    $challenge->ctrait();
+    return $challenge;
   }
+
+  public function ctrait()
+  {
+    if(strpos($this->name, '@')===false)//Il n'y a pas de joueur visé, ( ou d'entité, ex : @Julien, @homme...) ==> On choisi un joueur aléatoire
+    { 
+      $players = Player::getPlayer($this->id_party);
+      $player = $players[rand(0, sizeof($players)-1)];
+      $this->name = $player->username.' '.$this->name;
+
+    }else { //Sinon on remplace @nom_du_jouer par nom_du_joueur.
+      $this->name = str_replace('@', '', $this->name);
+    }
+  }
+
 }
 
 ?>
