@@ -11,12 +11,16 @@
 </section>
 
 <div id="main_bot" class ="section">
-      <br/><p id="game_link">Options de partage</p><br/>
-      <p id="link"><?php echo $_GET['game_id'] ?></p>
-        <form method="get" action="" class="p_section">
-          <input type="hidden" name="controller" value="PartyController">
-          <input type="hidden" name="method" value="sort">
-          <input type="hidden" name="admin" value="<?php echo $party->admin; ?>"><br/><br/>
-          <input type="submit" class="ok"value="Lancer">
-        </form>
+  <div class="p_section">
+      <p><?php echo $_GET['game_id'] ?></p>
+      <div id="player_list"></div>
+      <form method="get" action="">
+        <input type="hidden" name="controller" value="PartyController">
+        <input type="hidden" name="method" value="sort">
+        <input type="hidden" name="admin" value="<?php echo $party->admin; ?>"><br/><br/>
+        <input type="submit" class="ok"value="Lancer">
+      </form>
+    </div>
+    <script>var partyId = "<?php echo $party->id; ?>"; </script>
+    <script src="view/script/load_players.js"></script>
 </div>

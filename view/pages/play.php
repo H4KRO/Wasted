@@ -10,6 +10,10 @@
     </form>
 </section>
 <div id="main_bot" class ="section">
-    <p id="game_link">Options de partage</p><br/>
-    <p id="link"><?php echo $_GET['game_id'] ?> </p>
+  <div class="p_section">
+    <div id="player_list"></div>
+    <p id="link"><?php echo $_GET['game_id']; ?> </p>
+  </div>
+  <script>var partyId = "<?php echo $_GET['game_id']; ?>"; </script>
+  <script src="view/script/load_players.js"></script>
 </div>

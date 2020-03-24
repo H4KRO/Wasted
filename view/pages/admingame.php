@@ -10,5 +10,9 @@
       </div>
 </div>
 <div id="main_bot" class ="section">
-      <p class="p_section">Liste des joueurs</p>
+      <div class="p_section">
+        <div id="player_list"></div>
+      </div>
+      <script>var partyId = "<?php echo $party->id; ?>"; </script>
+      <script src="view/script/load_players.js"></script>
 </div>

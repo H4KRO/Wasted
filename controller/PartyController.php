@@ -33,5 +33,11 @@ class PartyController {
     $page = "admingame";
     require_once('view/main.php');
   }
+
+  static function api_getPlayers(){
+    $players = Player::getPlayer($_GET['id']);
+    header('content-type:application/json');
+    echo json_encode($players);
+  }
 }
  ?>
