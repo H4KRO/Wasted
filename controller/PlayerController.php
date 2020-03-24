@@ -14,7 +14,15 @@ class PlayerController {
 
   static function join_game() {
     $player = Player::create($_GET['game_id'], $_GET['username']);
-    require_once('view/pages/play.php');
+    $page = "play";
+    require_once('view/main.php');
+  }
+
+  static function getPlayer()
+  {
+    $game_id = $_GET['game_id'];
+    $players = Player::getPlayer($game_id);
+    return $players;
   }
 
 }

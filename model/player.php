@@ -17,6 +17,14 @@ class Player {
     $req = $pdo->query("SELECT * FROM player;");
     return $req->fetchAll(PDO::FETCH_CLASS, 'Player');
   }
+
+  public static function getPlayer($game_id)
+  {
+    $pdo = $GLOBALS['pdo'];
+    $req = $pdo->query('SELECT username FROM player WHERE game_id ="'.$game_id.'"');
+    return $req->fetchAll(PDO::FETCH_CLASS, 'Player');
+  }
 }
 
- ?>
+?>
+

@@ -25,9 +25,8 @@ require_once($CONTROLLERPATH . 'PlayerController.php');
 
 Logger::logArray(Party::getAll());
 
+
 // Views
 require_once($TEMPLATEPATH . 'router.php');
-
-
 
  ?>

@@ -46,6 +46,8 @@ class Party {
     $req = $pdo->prepare($sql);
     $req->execute(array(":admin" => $this->admin));
   }
+
+
 }
 
  ?>
