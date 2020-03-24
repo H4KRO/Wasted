@@ -31,20 +31,17 @@ class Challenge {
 
   public function ctrait()
   {
-    $Havea = TRUE;
+    $havea = TRUE;
 
-    while($Havea == TRUE){
-      
-      $havea = FALSE;
+    while($havea == TRUE){
 
-      $pos = strpos($this->name, '@')-1;
+      $pos = strpos($this->name, '@');
 
       if(strpos($this->name, '@')===false)//Il n'y a pas de joueur visé, ( ou d'entité, ex : @Julien, @homme...) ==> On choisi un joueur aléatoire
       { 
         $players = Player::getPlayer($this->id_party);
         $player = $players[rand(0, sizeof($players)-1)];
         $this->name = $player->username.' '.$this->name;
-        $havea = FALSE;
 
       }else { //Sinon on remplace @nom_du_jouer par nom_du_joueur.
 
@@ -52,17 +49,22 @@ class Challenge {
 
           $players = Player::getPlayerBySex($this->id_party, "homme");
           $player = $players[rand(0, sizeof($players)-1)];
-          $this->name = substr_replace($this->name, $player->username, $pos , 5);
+          $this->name = substr_replace($this->name, $player->username, $pos , 6);
 
         }else if(strpos($this->name, '@femme')!==false){//Si c'est une femme
 
           $players = Player::getPlayerBySex($this->id_party, "femme");
           $player = $players[rand(0, sizeof($players)-1)];
           $this->name = substr_replace($this->name, $player->username, $pos, 5);
+          
         }else{
 
           $this->name = str_replace('@', '', $this->name);
         }
+      }
+      if(strpos($this->name, '@')===false){
+        
+        $havea = FALSE;
       }
     }
   }
