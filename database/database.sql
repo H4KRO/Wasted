@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 23 mars 2020 à 10:15
+-- Généré le :  mar. 24 mars 2020 à 18:34
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `challenge`
 --
 
+DROP TABLE IF EXISTS `challenge`;
 CREATE TABLE IF NOT EXISTS `challenge` (
   `id` varchar(30) NOT NULL,
   `name` text NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `challenge` (
 -- Structure de la table `logger`
 --
 
+DROP TABLE IF EXISTS `logger`;
 CREATE TABLE IF NOT EXISTS `logger` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `time` datetime NOT NULL,
@@ -55,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `logger` (
 -- Structure de la table `party`
 --
 
+DROP TABLE IF EXISTS `party`;
 CREATE TABLE IF NOT EXISTS `party` (
   `id` varchar(30) NOT NULL,
   `started` tinyint(1) NOT NULL,
@@ -68,12 +71,14 @@ CREATE TABLE IF NOT EXISTS `party` (
 -- Structure de la table `player`
 --
 
+DROP TABLE IF EXISTS `player`;
 CREATE TABLE IF NOT EXISTS `player` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` varchar(30) NOT NULL,
   `username` text NOT NULL,
+  `sex` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
