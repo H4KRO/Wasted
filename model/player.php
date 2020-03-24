@@ -25,6 +25,13 @@ class Player {
     $req = $pdo->query('SELECT * FROM player WHERE game_id ="'.$game_id.'"');
     return $req->fetchAll(PDO::FETCH_CLASS, 'Player');
   }
+
+  public static function getPlayerBySex($game_id, $sex)
+  {
+    $pdo = $GLOBALS['pdo'];
+    $req = $pdo->query('SELECT * FROM player WHERE sex = "'.$sex.'" AND game_id ="'.$game_id.'"');
+    return $req->fetchAll(PDO::FETCH_CLASS, 'Player');
+  }
 }
 
 ?>
