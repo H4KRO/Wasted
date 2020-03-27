@@ -35,8 +35,6 @@ class Challenge {
 
     while($havea == TRUE){
 
-      $pos = strpos($this->name, '@');
-
       if(strpos($this->name, '@')===false)//Il n'y a pas de joueur visé, ( ou d'entité, ex : @Julien, @homme...) ==> On choisi un joueur aléatoire
       { 
         $players = Player::getPlayer($this->id_party);
@@ -47,15 +45,25 @@ class Challenge {
 
         if(strpos($this->name, '@homme')!==false){//Si c'est un homme
 
-          $players = Player::getPlayerBySex($this->id_party, "homme");
+          $pos = strpos($this->name, '@homme');
+          if(($this->nomen($this->id_party))== 0){
+            $players = Player::getPlayer($this->id_party);
+          }else {
+            $players = Player::getPlayerBySex($this->id_party, "homme");
+          }
           $player = $players[rand(0, sizeof($players)-1)];
           $this->name = substr_replace($this->name, $player->username, $pos , 6);
 
         }else if(strpos($this->name, '@femme')!==false){//Si c'est une femme
 
-          $players = Player::getPlayerBySex($this->id_party, "femme");
-          $player = $players[rand(0, sizeof($players)-1)];
-          $this->name = substr_replace($this->name, $player->username, $pos, 5);
+          $pos = strpos($this->name, '@femme');
+          if(($this->nowomen($this->id_party))== 0){
+            $players = Player::getPlayer($this->id_party);
+          }else {
+            $players = Player::getPlayerBySex($this->id_party, "femme");
+          }
+            $player = $players[rand(0, sizeof($players)-1)];
+            $this->name = substr_replace($this->name, $player->username, $pos, 6);
           
         }else{
 
@@ -67,6 +75,22 @@ class Challenge {
         $havea = FALSE;
       }
     }
+  }
+    
+  public function nowomen($game_id)
+  {
+    $pdo = $GLOBALS['pdo'];
+    $req = $pdo->query('CALL nowomen("'.$game_id.'")');
+    $res = $req->fetchAll();
+    return $res[0][0];
+  }
+
+  public function nomen($game_id)
+  {
+    $pdo = $GLOBALS['pdo'];
+    $req = $pdo->query('CALL nomen("'.$game_id.'")');
+    $res = $req->fetchAll();
+    return $res[0][0];
   }
 }
 

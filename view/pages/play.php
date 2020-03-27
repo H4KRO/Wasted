@@ -9,11 +9,13 @@
         <input class="ok" type="submit" value="Ok">
     </form>
 </section>
-<div id="main_bot" class ="section">
-  <div class="p_section">
+<div id="master_bot" class ="section">
+  <div id="play_bot" class="p_section">
+  <p id="link"><?php echo $_GET['game_id']; ?> </p>
     <div id="player_list"></div>
-    <p id="link"><?php echo $_GET['game_id']; ?> </p>
   </div>
-  <script>var partyId = "<?php echo $_GET['game_id']; ?>"; </script>
+  <script>
+    var partyId = "<?php echo $_GET['game_id']; ?>"; 
+  </script>
   <script src="view/script/load_players.js"></script>
 </div>

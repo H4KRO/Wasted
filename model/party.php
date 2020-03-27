@@ -47,7 +47,6 @@ class Party {
     $req->execute(array(":admin" => $this->admin));
   }
 
-
 }
 
  ?>
