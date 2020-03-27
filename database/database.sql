@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 24 mars 2020 à 18:34
+-- Généré le :  ven. 27 mars 2020 à 14:00
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `wasted`
 --
+
+DELIMITER $$
+--
+-- Procédures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `nomen` (IN `id` VARCHAR(30))  BEGIN
+    SELECT COUNT(*) FROM player WHERE game_id = id AND sex="homme";
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `nowomen` (IN `id` VARCHAR(30))  BEGIN
+    SELECT COUNT(*) FROM player WHERE game_id = id AND sex="femme";
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -74,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `username` text NOT NULL,
   `sex` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=192 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
