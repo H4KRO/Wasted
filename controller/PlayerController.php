@@ -13,8 +13,15 @@ class PlayerController {
   }
 
   static function join_game() {
-    $player = Player::create($_GET['game_id'], $_GET['username'],  $_GET['sex']);
-    $page = "play";
+    if(Player::exist($_GET['username'], $_GET['game_id']))
+    {
+      $error = "Ce pseudo est déjà pris !";
+      $page = "join";
+    }else {
+      $player = Player::create($_GET['game_id'], $_GET['username'],  $_GET['sex']);
+      $page = "play";
+    }
+    
     require_once('view/main.php');
   }
 

@@ -13,6 +13,14 @@ class Player {
     $req->execute(array(":game_id" => $player->game_id, ":username" => $player->username, ":sex"=>$player->sex));
   }
 
+  public static function exist($username, $game_id)
+  {
+    $pdo = $GLOBALS['pdo'];
+    $req = $pdo->query('CALL exist("'.$username.'", "'.$game_id.'")');
+    $res = $req->fetchAll();
+    return $res[0][0];
+  }
+
   public static function getAll() {
     $pdo = $GLOBALS['pdo'];
     $req = $pdo->query("SELECT * FROM player;");
