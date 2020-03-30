@@ -17,4 +17,5 @@
   <script>
     var partyId = "<?php echo $_GET['game_id']; ?>"; 
   </script>
+  <script src="view/script/load_players.js"></script>
 </div>
