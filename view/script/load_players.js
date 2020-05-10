@@ -7,7 +7,7 @@ function loadPlayers() {
             console.log(players.length);
             var playersText = "";
             for(var i = 0; i < players.length; i++){
-              playersText += " prout" + players[i].username;
+              playersText += " " + players[i].username;
             }
             document.getElementById("player_list").innerHTML = playersText;
        }
